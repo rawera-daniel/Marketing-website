@@ -19,8 +19,6 @@ const closeModal = function () {
   overlay.classList.add('hidden');
 };
 
-
-
 btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
 
 btnCloseModal.addEventListener('click', closeModal);
@@ -32,3 +30,10 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+// Implementing smooth scrolling
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
